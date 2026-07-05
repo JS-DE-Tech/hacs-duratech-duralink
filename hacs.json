@@ -1,0 +1,7 @@
+{
+  "name": "Duratech DuraLink",
+  "version": "0.1.0",
+  "content_in_root": false,
+  "render_readme": true,
+  "domains": ["light", "select", "button", "sensor", "binary_sensor"]
+}

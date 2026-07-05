@@ -1,0 +1,186 @@
+{
+  "title": "Duratech DuraLink",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Duratech DuraLink",
+        "description": "Connect to the TCP-to-RS485 gateway.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "name": "Device name",
+          "power_mode": "Is there an external power actuator for the transformer?"
+        }
+      },
+      "power_entity": {
+        "title": "Transformer power actuator",
+        "description": "Select the Home Assistant switch entity that controls transformer power.",
+        "data": {
+          "power_entity_id": "Switch entity"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the TCP gateway.",
+      "invalid_host_or_port": "Host or port is invalid.",
+      "invalid_power_entity": "Select a switch entity.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This gateway is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Duratech DuraLink options",
+        "description": "Configure scaffold timing options.",
+        "data": {
+          "power_on_delay": "Power-on delay",
+          "power_off_delay": "Power-off delay",
+          "command_debounce_ms": "Command debounce window in milliseconds",
+          "inter_command_delay_ms": "Inter-command delay",
+          "rgb_join_timeout_ms": "RGB join timeout in milliseconds",
+          "lamp_wakeup_delay": "Lamp wake-up delay in milliseconds",
+          "startup_preset_mode": "Startup Preset",
+          "startup_preset_command": "Startup Preset program",
+          "command_terminator": "Command terminator",
+          "protocol_debug_logging": "Protocol debug logging"
+        },
+        "data_description": {
+          "protocol_debug_logging": "Logs transmitted ASCII commands, terminator, gateway target, DesiredState, PowerState, queue length and command result."
+        }
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Refresh",
+      "description": "Refresh Duratech DuraLink coordinator diagnostics."
+    },
+    "send_raw_command": {
+      "name": "Send raw command",
+      "description": "Advanced diagnostic service. Sends a raw RS485 command through the CommandManager."
+    },
+    "cancel_power_timer": {
+      "name": "Cancel power timer",
+      "description": "Cancel the delayed transformer power-off timer."
+    },
+    "turn_transformer_on": {
+      "name": "Turn transformer on",
+      "description": "Turn the configured transformer power actuator on."
+    },
+    "turn_transformer_off": {
+      "name": "Turn transformer off",
+      "description": "Turn the configured transformer power actuator off."
+    },
+    "execute_intent": {
+      "name": "Execute intent",
+      "description": "Execute a semantic Duratech DuraLink intent through the CommandManager."
+    },
+    "lampen_sync": {
+      "name": "Lampen-Sync",
+      "description": "Runs the DuraLink lamp synchronization procedure. This is useful if connected pool lights are showing different colors or are out of sync. During the 45 second period no further RS485 commands are sent. The procedure resets the lights to Program 1 / Blue."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "gateway_connection": {
+        "name": "Gateway-Verbindung"
+      },
+      "protocol": {
+        "name": "Protocol"
+      },
+      "transport": {
+        "name": "Transport"
+      },
+      "last_rs485_command": {
+        "name": "Letzter RS485-Befehl"
+      },
+      "queue_length": {
+        "name": "Queue-Länge"
+      },
+      "remaining_power_off_countdown": {
+        "name": "Abschalt-Countdown"
+      },
+      "power_state": {
+        "name": "Power State"
+      },
+      "power_state_source": {
+        "name": "Power State Source"
+      },
+      "last_lamp_command": {
+        "name": "Letzter Lampenbefehl"
+      },
+      "active_light_program": {
+        "name": "Active Light Program"
+      },
+      "last_rgb_color": {
+        "name": "Last RGB Value"
+      },
+      "last_color_temperature_kelvin": {
+        "name": "Last Color Temperature"
+      },
+      "last_brightness": {
+        "name": "Last Brightness"
+      },
+      "last_mode": {
+        "name": "Last Mode"
+      },
+      "desired_light_state": {
+        "name": "Desired State"
+      },
+      "rgb_join_state": {
+        "name": "RGB Join State"
+      },
+      "startup_sequence_state": {
+        "name": "Init Phase (legacy)"
+      },
+      "init_phase": {
+        "name": "Init Phase"
+      },
+      "init_command": {
+        "name": "Init Command"
+      },
+      "init_command_history": {
+        "name": "Init Command History"
+      },
+      "auto_sync_status": {
+        "name": "Lampen-Sync Status"
+      },
+      "power_on_countdown": {
+        "name": "Power-On Countdown"
+      },
+      "protocol_debug_logging": {
+        "name": "Protokoll-Debug-Logging"
+      }
+    },
+    "binary_sensor": {
+      "transformer_powered": {
+        "name": "Trafo eingeschaltet"
+      },
+      "lamp_is_on": {
+        "name": "Lampe eingeschaltet"
+      },
+      "delayed_power_off_timer_active": {
+        "name": "Abschalt-Timer aktiv"
+      }
+    },
+    "select": {
+      "program": {
+        "name": "Lichtprogramm"
+      }
+    },
+    "button": {
+      "program_up": {
+        "name": "Nächstes Programm"
+      },
+      "program_down": {
+        "name": "Vorheriges Programm"
+      },
+      "lampen_sync": {
+        "name": "Lampen-Sync"
+      }
+    }
+  }
+}

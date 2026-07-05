@@ -1,0 +1,108 @@
+refresh:
+  name: Refresh
+  description: Refresh Duratech DuraLink coordinator diagnostics.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+
+send_raw_command:
+  name: Send raw command
+  description: Advanced diagnostic service. Sends a raw RS485 command through the CommandManager.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+    command:
+      name: Command
+      description: Raw DuraLink command such as PL1 or PD100. Use only for diagnostics.
+      required: true
+      selector:
+        text:
+
+cancel_power_timer:
+  name: Cancel power timer
+  description: Cancel the delayed transformer power-off timer through the CommandManager.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+
+turn_transformer_on:
+  name: Turn transformer on
+  description: Turn the configured transformer power actuator on through the CommandManager.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+
+turn_transformer_off:
+  name: Turn transformer off
+  description: Turn the configured transformer power actuator off through the CommandManager.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+
+execute_intent:
+  name: Execute intent
+  description: Execute a semantic Duratech DuraLink intent through the CommandManager.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
+    intent:
+      name: Intent
+      description: Semantic intent to execute.
+      required: true
+      selector:
+        select:
+          options:
+            - turn_on
+            - turn_off
+            - set_brightness
+            - set_rgb
+            - set_effect
+            - next_program
+            - previous_program
+            - auto_sync
+    brightness:
+      name: Brightness
+      description: Optional Home Assistant brightness value from 0 to 255.
+      selector:
+        number:
+          min: 0
+          max: 255
+          mode: slider
+    rgb_color:
+      name: RGB color
+      description: Optional RGB value as comma-separated text, for example 0,0,255.
+      selector:
+        text:
+    effect:
+      name: Effect
+      description: Optional verified program label, for example Warmweiss (PS12) or Farbwechsel langsam (PS10).
+      selector:
+        text:
+
+lampen_sync:
+  name: Lampen-Sync
+  description: Runs the DuraLink lamp synchronization procedure. This is useful if connected pool lights are showing different colors or are out of sync. During the 45 second period no further RS485 commands are sent. The procedure resets the lights to Program 1 / Blue.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID. If omitted, the first loaded entry is used.
+      selector:
+        text:
