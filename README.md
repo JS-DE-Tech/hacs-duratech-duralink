@@ -13,7 +13,7 @@ DuraLink PLP-REM-350 pool light controllers locally via TCP-to-RS485.
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Custom%20Integration-41BDF5)](https://www.home-assistant.io/)
 [![HACS](https://img.shields.io/badge/HACS-Custom%20Repository-41BDF5)](https://hacs.xyz/)
 [![Protocol](https://img.shields.io/badge/Protocol-TCP--to--RS485-success)](docs/rs485_protocol.md)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/JS-DE-Tech/hacs-duratech-duralink/blob/main/LICENSE)
 [![Support](https://img.shields.io/badge/Support-PayPal-00457C)](https://paypal.me/JensSaffrich)
 
 This integration controls the DuraLink controller locally over your LAN. It does
