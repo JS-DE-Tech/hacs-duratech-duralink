@@ -2,7 +2,7 @@
 
 <p align="center">
   <img
-    src="docs/images/plp-rem-350.jpeg"
+    src="https://raw.githubusercontent.com/JS-DE-Tech/hacs-duratech-duralink/main/docs/images/plp-rem-350.jpeg"
     alt="Duratech / SpectraVision PLP-REM-350 DuraLink controller"
     width="420">
 </p>
@@ -10,11 +10,11 @@
 Home Assistant HACS custom integration for controlling Duratech / SpectraVision
 DuraLink PLP-REM-350 pool light controllers locally via TCP-to-RS485.
 
-[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Custom%20Integration-41BDF5?logo=home-assistant&logoColor=white)](https://www.home-assistant.io/)
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Custom%20Integration-41BDF5)](https://www.home-assistant.io/)
 [![HACS](https://img.shields.io/badge/HACS-Custom%20Repository-41BDF5)](https://hacs.xyz/)
 [![Protocol](https://img.shields.io/badge/Protocol-TCP--to--RS485-success)](docs/rs485_protocol.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-[![Support via PayPal](https://img.shields.io/badge/Support%20via-PayPal-0070BA?logo=paypal&logoColor=white)](https://paypal.me/JensSaffrich)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Support](https://img.shields.io/badge/Support-PayPal-00457C)](https://paypal.me/JensSaffrich)
 
 This integration controls the DuraLink controller locally over your LAN. It does
 not require MQTT, Node-RED, or a cloud connection. Home Assistant entities route
@@ -46,17 +46,17 @@ verified RS485 commands over the configured TCP gateway.
 
 <p align="center">
   <img
-    src="docs/images/plp-rem-350_detail.jpeg"
+    src="https://raw.githubusercontent.com/JS-DE-Tech/hacs-duratech-duralink/main/docs/images/plp-rem-350_detail.jpeg"
     alt="PLP-REM-350 DuraLink controller detail"
+    width="420">
+  <img
+    src="https://raw.githubusercontent.com/JS-DE-Tech/hacs-duratech-duralink/main/docs/images/waveshare.jpeg"
+    alt="Waveshare RS485 to PoE ETH (B) gateway"
     width="320">
   <img
-    src="docs/images/waveshare.jpeg"
-    alt="Waveshare RS485 to PoE ETH gateway"
-    width="320">
-  <img
-    src="docs/images/poolleds.jpeg"
+    src="https://raw.githubusercontent.com/JS-DE-Tech/hacs-duratech-duralink/main/docs/images/poolleds.jpeg"
     alt="SpectraVision / Duravision pool lights"
-    width="320">
+    width="420">
 </p>
 
 The PLP-REM-350 remains the lighting controller. The Waveshare gateway only
@@ -68,9 +68,9 @@ Configure the Waveshare RS485 to PoE ETH (B) gateway as a TCP server.
 
 <p align="center">
   <img
-    src="docs/images/waveshare_config.png"
+    src="https://raw.githubusercontent.com/JS-DE-Tech/hacs-duratech-duralink/main/docs/images/waveshare_config.png"
     alt="Waveshare TCP-to-RS485 configuration"
-    width="850">
+    width="720">
 </p>
 
 Use these serial and network settings:
