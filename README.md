@@ -145,7 +145,7 @@ not need a power entity.
 
 The entity model is documented in:
 
-[docs/entities.md](docs/entities.md)
+[docs/entities.md](https://github.com/JS-DE-Tech/hacs-duratech-duralink/blob/main/docs/entities.md)
 
 The integration exposes a Home Assistant light entity, a program select entity,
 diagnostic sensors, transformer/lamp binary sensors, and buttons for next
@@ -155,7 +155,7 @@ program, previous program, and Lampen-Sync.
 
 The implemented and documented RS485 commands are described in:
 
-[docs/rs485_protocol.md](docs/rs485_protocol.md)
+[docs/rs485_protocol.md](https://github.com/JS-DE-Tech/hacs-duratech-duralink/blob/main/docs/rs485_protocol.md)
 
 The integration currently uses write-only optimistic control. It sends verified
 DuraLink ASCII commands such as `PL0`, `PL1`, `PCrrrgggbbb`, `PTxyz`, `PDxxx`,
